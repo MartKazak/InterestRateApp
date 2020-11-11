@@ -4,7 +4,6 @@
 
 1. You should have a `MS SQL SERVER` installed on your machine and a tool to discover your database(s). (I used SQL Server Management Studio 2019)
 2. You should have `.Net Core 3.1 SDK` installed on your machine (<https://dotnet.microsoft.com/download/dotnet-core/3.1>)
-3. You can download my code from ... TODO
 
 ## How to run application
 1. Open command promt and navigate to `InterestRateApp\InterestRateApp.API` folder
