@@ -47,6 +47,7 @@ Services a responsible for request handling, business rules implementation and v
 
 ## Required improvements
 TODO: add Unit test for services and agreement procesor.
+
 TODO: implement UnitOfWork
 
 ## Swagger
