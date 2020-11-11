@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InterestRateApp.DataAccess\InterestRateApp.DataAccess.csproj" />
+    <ProjectReference Include="..\InterestRateApp.Infrastructure\InterestRateApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\InterestRateApp.Services\InterestRateApp.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>

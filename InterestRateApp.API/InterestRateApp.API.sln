@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterestRateApp.API", "InterestRateApp.API.csproj", "{A3B6551A-2007-4134-BC2D-7A9E01FDFB70}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterestRateApp.Infrastructure", "..\InterestRateApp.Infrastructure\InterestRateApp.Infrastructure.csproj", "{D1D12DA9-0556-4967-81A0-6D13EECA437F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterestRateApp.Domain", "..\InterestRateApp.Domain\InterestRateApp.Domain.csproj", "{C8F1B8C3-6AC9-4A11-A928-2E4F9BF4D3EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterestRateApp.Services", "..\InterestRateApp.Services\InterestRateApp.Services.csproj", "{8E26ED39-FE08-43CE-8B94-3F3BE0DF8018}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterestRateApp.Contracts", "..\InterestRateApp.Contracts\InterestRateApp.Contracts.csproj", "{FF0A1CC4-AD67-42E4-9F64-9EDC18D7FDF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterestRateApp.DataAccess", "..\InterestRateApp.DataAccess\InterestRateApp.DataAccess.csproj", "{CB8B730A-E0CF-4988-87B9-023FF13808C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3B6551A-2007-4134-BC2D-7A9E01FDFB70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3B6551A-2007-4134-BC2D-7A9E01FDFB70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3B6551A-2007-4134-BC2D-7A9E01FDFB70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3B6551A-2007-4134-BC2D-7A9E01FDFB70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1D12DA9-0556-4967-81A0-6D13EECA437F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1D12DA9-0556-4967-81A0-6D13EECA437F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1D12DA9-0556-4967-81A0-6D13EECA437F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1D12DA9-0556-4967-81A0-6D13EECA437F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8F1B8C3-6AC9-4A11-A928-2E4F9BF4D3EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8F1B8C3-6AC9-4A11-A928-2E4F9BF4D3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8F1B8C3-6AC9-4A11-A928-2E4F9BF4D3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8F1B8C3-6AC9-4A11-A928-2E4F9BF4D3EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E26ED39-FE08-43CE-8B94-3F3BE0DF8018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E26ED39-FE08-43CE-8B94-3F3BE0DF8018}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E26ED39-FE08-43CE-8B94-3F3BE0DF8018}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E26ED39-FE08-43CE-8B94-3F3BE0DF8018}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF0A1CC4-AD67-42E4-9F64-9EDC18D7FDF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF0A1CC4-AD67-42E4-9F64-9EDC18D7FDF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF0A1CC4-AD67-42E4-9F64-9EDC18D7FDF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF0A1CC4-AD67-42E4-9F64-9EDC18D7FDF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB8B730A-E0CF-4988-87B9-023FF13808C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB8B730A-E0CF-4988-87B9-023FF13808C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB8B730A-E0CF-4988-87B9-023FF13808C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB8B730A-E0CF-4988-87B9-023FF13808C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15338F2E-80E3-49C7-BA39-65AD74264C8A}
+	EndGlobalSection
+EndGlobal
