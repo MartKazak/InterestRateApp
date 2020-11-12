@@ -7,10 +7,11 @@
 
 ## How to run application
 1. Open command promt and navigate to `InterestRateApp\InterestRateApp.API` folder
-2. Run command ```dotnet build```
-3. Run command ```dotnet run```
-4. Navigate to url in your browser: <https://localhost:5001>
-5. For successful result you should see a `Swagger` page
+2. Run command ```dotnet restore```
+3. Run command ```dotnet build```
+4. Run command ```dotnet run```
+5. Navigate to url in your browser: <https://localhost:5001>
+6. For successful result you should see a `Swagger` page
 
 P.S. Database will be created on project startup. Pending migrations will be applied too.
 
