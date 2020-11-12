@@ -51,6 +51,8 @@ TODO: add Unit test for services and agreement procesor.
 
 TODO: implement UnitOfWork
 
+TODO: add logging
+
 ## Swagger
 I decided to use swagger for simplier API actions testing without UI. Also it gives the possibility to get versioned API in the future, extract contracts for third parties.
 
