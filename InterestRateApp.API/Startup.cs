@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json.Serialization;
 using InterestRateApp.DataAccess;
 using InterestRateApp.Infrastructure.Services;
 using InterestRateApp.Services;
@@ -25,7 +26,11 @@ namespace InterestRateApp.API
         
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddJsonOptions(x =>
+            {
+                x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+            });
+
             services.AddScoped<IDatabaseContext>(provider => provider.GetService<DatabaseContext>());
             
             ConfigureService(services);
