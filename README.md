@@ -18,8 +18,8 @@ P.S. Database will be created on project startup. Pending migrations will be app
 ## How to test application
 1. Get all customers list: click on `GET` `api/customers` item in swagger page. Then click a `Try it out button`  and take one of the customer `id` from response
 2. Then do the same with `POST` `api/agreements` item. Fill your selected customerId in the request body. Add other values.
-If you are posting with the existing agreement id then that agreement will be updated
-Also BaseRateCode is enum so, you should pick a value regarding on this enum
+If you are posting with the existing agreement id then that agreement will be updated.
+Also BaseRateCode is enum so, you should pick a name of value from this enum
 ```
     public enum BaseRateCode
     {
@@ -44,7 +44,7 @@ Chosen .NET Standard Library for Infrastucture project because that gives possib
 
 I decided to use repositry pattern, because that is great way to isolate DB layer from the domain. To implement a full repository pattern there should be added Unit Of Work funtionality, to esure transaction scope.
 
-Services a responsible for request handling, business rules implementation and validation.
+Services are responsible for request handling, business rules implementation and validation.
 
 ## Required improvements
 TODO: add Unit test for services and agreement procesor.
@@ -54,7 +54,7 @@ TODO: implement UnitOfWork
 TODO: add logging
 
 ## Swagger
-I decided to use swagger for simplier API actions testing without UI. Also it gives the possibility to get versioned API in the future, extract contracts for third parties.
+I decided to use swagger for simplier API actions testing without dedicated web application. Also it gives the possibility to get versioned API in the future, extract contracts for third parties.
 
 ## EnsureThat
 Flexible and extendable validation library.
