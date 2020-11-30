@@ -2,7 +2,7 @@ using System;
 using System.Text.Json.Serialization;
 using InterestRateApp.DataAccess;
 using InterestRateApp.Infrastructure.Services;
-using InterestRateApp.Services;
+using InterestRateApp.Services.Processors;
 using InterestRateApp.Services.Repositories;
 using InterestRateApp.Services.Services;
 using Microsoft.AspNetCore.Builder;
@@ -76,9 +76,9 @@ namespace InterestRateApp.API
 
             app.Use(async (httpContext, next) =>
             {
-                if (string.IsNullOrEmpty(httpContext.Request.Path) ||
-                    httpContext.Request.Path == "/" ||
-                    httpContext.Request.Path == "/api")
+                if (string.IsNullOrEmpty(httpContext.Request.Path) 
+                    || httpContext.Request.Path == "/" 
+                    || httpContext.Request.Path == "/api")
                 {
                     httpContext.Response.Redirect(httpContext.Request.PathBase + "/swagger");
                     return;

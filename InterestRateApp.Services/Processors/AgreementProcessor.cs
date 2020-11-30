@@ -6,13 +6,8 @@ using InterestRateApp.Infrastructure;
 using InterestRateApp.Infrastructure.Services;
 using InterestRateApp.Services.Services;
 
-namespace InterestRateApp.Services
+namespace InterestRateApp.Services.Processors
 {
-    public interface IAgreementProcessor
-    {
-        Task<AgreementDetailsDTO> ProcessAgreementAsync(AgreementRequest agreementRequest);
-    }
-
     public class AgreementProcessor : IAgreementProcessor
     {
         private readonly IAgreementService _agreementService;

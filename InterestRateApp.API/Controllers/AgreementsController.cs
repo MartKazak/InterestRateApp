@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using InterestRateApp.Contracts.Requests;
 using InterestRateApp.Contracts.Responses;
-using InterestRateApp.Services;
+using InterestRateApp.Services.Processors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InterestRateApp.API.Controllers
