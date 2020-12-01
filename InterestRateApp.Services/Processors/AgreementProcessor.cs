@@ -38,7 +38,10 @@ namespace InterestRateApp.Services.Processors
             var (currentBaseRateValue, newBaseRateValue) = 
                 await GetBaseRateValuesAsync(currentBaseRateCode, agreementRequest.BaseRateCode);
             
-            var agreement = _agreementService.AddOrUpdateAgreement(agreementRequest);
+            var agreement = existingAgreement
+                ? await _agreementService.UpdateAgreementAsync(agreementRequest)
+                : await _agreementService.AddAgreementAsync(agreementRequest);
+
             var customer = await _customerService.GetCustomerAsync(agreementRequest.CustomerId);
 
             var margin = agreementRequest.Margin; 

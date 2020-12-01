@@ -104,7 +104,7 @@ namespace InterestRateApp.DataAccess
     }
 
     // TODO: Create extension to configure DbContext
-    // TODO use configuration builder to get connection string
+    // TODO: use configuration builder to get connection string
     public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<DatabaseContext>
     {
         public DatabaseContext CreateDbContext(string[] args)

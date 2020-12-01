@@ -1,4 +1,6 @@
-﻿using InterestRateApp.Domain.Entities;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using InterestRateApp.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace InterestRateApp.DataAccess
@@ -9,5 +11,6 @@ namespace InterestRateApp.DataAccess
         DbSet<AgreementEntity> Agreements { get; set; }
 
         int SaveChanges();
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }

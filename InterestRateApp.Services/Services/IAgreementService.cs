@@ -10,6 +10,7 @@ namespace InterestRateApp.Services.Services
     {
         bool AgreementExists(Guid agreementId);
         Task<BaseRateCode> GetBaseRateCodeAsync(Guid agreementId);
-        AgreementDTO AddOrUpdateAgreement(AgreementRequest agreementRequest);
+        Task<AgreementDTO> AddAgreementAsync(AgreementRequest agreementRequest);
+        Task<AgreementDTO> UpdateAgreementAsync(AgreementRequest agreementRequest);
     }
 }

@@ -19,41 +19,23 @@ namespace InterestRateApp.Services.Repositories
             _databaseContext = databaseContext;
         }
 
-        public async Task<BaseRateCode> GetBaseRateCode(Guid agreementId)
-        {
-            return await _databaseContext.Agreements
+        public async Task<BaseRateCode> GetBaseRateCode(Guid agreementId) =>
+            await _databaseContext.Agreements
                 .Where(agreement => agreement.Id == agreementId)
                 .Select(agreement => agreement.BaseRateCode)
                 .FirstOrDefaultAsync();
-        }
 
-        public void AddAgreement(AgreementEntity agreementEntity)
+        public async Task<Agreement> AddAgreementAsync(AgreementEntity agreementEntity)
         {
-            _databaseContext.Agreements.Add(agreementEntity);
-            _databaseContext.SaveChanges();
-        }
-
-        public Agreement AddOrUpdateAgreement(AgreementEntity agreementEntity)
-        {
-            var agreementId = agreementEntity.Id;
-            var existingAgreement = Exists(agreementId);
-
-            if (existingAgreement)
-            {
-                UpdateAgreement(agreementEntity);
-            }
-            else
-            {
-                AddAgreement(agreementEntity);
-            }
-
+            await _databaseContext.Agreements.AddAsync(agreementEntity);
+            await _databaseContext.SaveChangesAsync();
             return agreementEntity.ToDomain();
         }
 
-        public void UpdateAgreement(AgreementEntity agreementEntity)
+        public async Task<Agreement> UpdateAgreementAsync(AgreementEntity agreementEntity)
         {
             var agreementId = agreementEntity.Id;
-            var currentAgreement = _databaseContext.Agreements.Find(agreementId);
+            var currentAgreement = await _databaseContext.Agreements.FindAsync(agreementId);
 
             if (currentAgreement == null)
             {
@@ -66,7 +48,9 @@ namespace InterestRateApp.Services.Repositories
             currentAgreement.Duration = currentAgreement.Duration;
 
             _databaseContext.Agreements.Update(currentAgreement);
-            _databaseContext.SaveChanges();
+            await _databaseContext.SaveChangesAsync();
+
+            return currentAgreement.ToDomain();
         }
 
         public bool Exists(Guid agreementId) => 

@@ -23,7 +23,10 @@ namespace InterestRateApp.Services.Services
         public Task<BaseRateCode> GetBaseRateCodeAsync(Guid agreementId) => 
             _agreementRepository.GetBaseRateCode(agreementId);
 
-        public AgreementDTO AddOrUpdateAgreement(AgreementRequest agreementRequest) => 
-            _agreementRepository.AddOrUpdateAgreement(agreementRequest.ToEntity()).ToDTO();
+        public async Task<AgreementDTO> AddAgreementAsync(AgreementRequest agreementRequest) =>
+            (await _agreementRepository.AddAgreementAsync(agreementRequest.ToEntity())).ToDTO();
+
+        public async Task<AgreementDTO> UpdateAgreementAsync(AgreementRequest agreementRequest) =>
+            (await _agreementRepository.UpdateAgreementAsync(agreementRequest.ToEntity())).ToDTO();
     }
 }

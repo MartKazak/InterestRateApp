@@ -9,9 +9,8 @@ namespace InterestRateApp.Services.Repositories
     public interface IAgreementRepository
     {
         Task<BaseRateCode> GetBaseRateCode(Guid agreementId);
-        void AddAgreement(AgreementEntity agreementEntity);
-        Agreement AddOrUpdateAgreement(AgreementEntity agreementEntity);
-        void UpdateAgreement(AgreementEntity agreementEntity);
+        Task<Agreement> AddAgreementAsync(AgreementEntity agreement);
+        Task<Agreement> UpdateAgreementAsync(AgreementEntity agreement);
         bool Exists(Guid agreementId);
     }
 }
