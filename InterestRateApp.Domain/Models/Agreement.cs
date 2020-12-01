@@ -1,5 +1,4 @@
 ﻿using System;
-using InterestRateApp.Infrastructure;
 
 namespace InterestRateApp.Domain.Models
 {

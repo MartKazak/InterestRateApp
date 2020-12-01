@@ -2,7 +2,7 @@
 using EnsureThat;
 using InterestRateApp.Contracts.Requests;
 using InterestRateApp.Contracts.Responses;
-using InterestRateApp.Infrastructure;
+using InterestRateApp.Domain;
 using InterestRateApp.Infrastructure.Services;
 using InterestRateApp.Services.Services;
 
@@ -61,10 +61,10 @@ namespace InterestRateApp.Services.Processors
 
         private async Task<(decimal, decimal)> GetBaseRateValuesAsync(BaseRateCode currentBaseRateCode, BaseRateCode newBaseRateCode)
         {
-            var newBaseRateValue = await _baseRateService.GetBaseRateValue(newBaseRateCode);
+            var newBaseRateValue = await _baseRateService.GetBaseRateValue(newBaseRateCode.ToString());
             var currentBaseRateValue = currentBaseRateCode == newBaseRateCode
                 ? newBaseRateValue
-                : await _baseRateService.GetBaseRateValue(currentBaseRateCode);
+                : await _baseRateService.GetBaseRateValue(currentBaseRateCode.ToString());
 
             return (currentBaseRateValue, newBaseRateValue);
         }

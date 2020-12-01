@@ -4,6 +4,6 @@ namespace InterestRateApp.Infrastructure.Services
 {
     public interface IBaseRateService
     {
-        Task<decimal> GetBaseRateValue(BaseRateCode baseRateCode);
+        Task<decimal> GetBaseRateValue(string baseRateCode);
     }
 }

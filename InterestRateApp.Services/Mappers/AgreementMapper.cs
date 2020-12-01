@@ -1,9 +1,9 @@
 ﻿using System;
 using InterestRateApp.Contracts.Requests;
 using InterestRateApp.Contracts.Responses;
+using InterestRateApp.Domain;
 using InterestRateApp.Domain.Entities;
 using InterestRateApp.Domain.Models;
-using InterestRateApp.Infrastructure;
 
 namespace InterestRateApp.Services.Mappers
 {

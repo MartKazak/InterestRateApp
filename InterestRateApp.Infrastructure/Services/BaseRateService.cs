@@ -12,7 +12,7 @@ namespace InterestRateApp.Infrastructure.Services
         public BaseRateService(HttpClient httpClient) =>
             _httpClient = httpClient;
 
-        public async Task<decimal> GetBaseRateValue(BaseRateCode baseRateCode)
+        public async Task<decimal> GetBaseRateValue(string baseRateCode)
         {
             var response = await _httpClient.GetAsync($"getLatestVilibRate?RateType={baseRateCode}");
             var content = await response.Content.ReadAsStringAsync();

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
+using InterestRateApp.Domain;
 using InterestRateApp.Domain.Entities;
 using InterestRateApp.Domain.Models;
-using InterestRateApp.Infrastructure;
 
 namespace InterestRateApp.Services.Repositories
 {

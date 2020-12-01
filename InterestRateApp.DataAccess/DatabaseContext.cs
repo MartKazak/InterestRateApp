@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
+using InterestRateApp.Domain;
 using InterestRateApp.Domain.Entities;
-using InterestRateApp.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 

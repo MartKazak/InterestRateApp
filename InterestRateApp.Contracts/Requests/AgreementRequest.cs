@@ -1,5 +1,5 @@
 ﻿using System;
-using InterestRateApp.Infrastructure;
+using InterestRateApp.Domain;
 
 namespace InterestRateApp.Contracts.Requests
 {

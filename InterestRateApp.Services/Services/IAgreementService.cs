@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using InterestRateApp.Contracts.Requests;
 using InterestRateApp.Contracts.Responses;
-using InterestRateApp.Infrastructure;
+using InterestRateApp.Domain;
 
 namespace InterestRateApp.Services.Services
 {

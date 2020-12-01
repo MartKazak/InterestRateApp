@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Threading.Tasks;
 using InterestRateApp.DataAccess;
+using InterestRateApp.Domain;
 using InterestRateApp.Domain.Entities;
 using InterestRateApp.Domain.Models;
-using InterestRateApp.Infrastructure;
 using InterestRateApp.Services.Mappers;
 using Microsoft.EntityFrameworkCore;
 

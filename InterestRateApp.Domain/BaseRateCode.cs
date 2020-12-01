@@ -1,4 +1,4 @@
-﻿namespace InterestRateApp.Infrastructure
+﻿namespace InterestRateApp.Domain
 {
     public enum BaseRateCode
     {
